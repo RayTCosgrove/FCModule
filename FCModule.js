@@ -17,11 +17,11 @@ Module.register("FCModule",{
 		return wrapper;
 	},
 
-	start: function() {
+	/*start: function() {
 	this.mySpecialProperty = "So much wow!";
 	Log.log(this.name + ' is started!');
 
-	const evtSource = new EventSource("192.168.86.248:3000/test")
+	var evtSource = new EventSource("192.168.86.248:3000/test")
 		evtSource.onmessage = function(e){
 		Log.log(e.data)
 		var node = document.createElement('SPAN')
@@ -32,8 +32,8 @@ Module.register("FCModule",{
 		}
 	
 },
-
+*/
   notificationReceived: function() {},
-  socketNotificationReceived: function() {},
+  socketNotificationReceived: function() {}
 
 });

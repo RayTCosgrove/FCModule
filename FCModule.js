@@ -17,7 +17,7 @@ Module.register("FCModule",{
 		return wrapper;
 	},
 
-	/*start: function() {
+	start: function() {
 	this.mySpecialProperty = "So much wow!";
 	Log.log(this.name + ' is started!');
 
@@ -32,7 +32,7 @@ Module.register("FCModule",{
 		}
 	
 },
-*/
+
   notificationReceived: function() {},
   socketNotificationReceived: function() {}
 

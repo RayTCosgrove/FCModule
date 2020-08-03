@@ -1,6 +1,6 @@
 //helloworld.js:
 
-Module.register("FCMODULE",{
+Module.register("FCModule",{
 	// Default module config.
 	defaults: {
 		text: "FC!"

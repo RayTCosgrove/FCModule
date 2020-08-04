@@ -18,7 +18,7 @@ Module.register("FCModule",{
 	},
 
 	start: function() {
-	const evtSource = new EventSource("http://localhost:3000/test");
+	const evtSource = new EventSource("http://192.168.86.248:3000/test");
 		evtSource.addEventListener('message', message => {
 		
 		console.log("got", message)
@@ -28,6 +28,12 @@ Module.register("FCModule",{
 		var x = document.getElementById('FC')
 		x.appendChild(node)
 
+
+		});
+
+		evtSource.addEventListener('open', message => {
+		
+		console.log("opened")
 
 		});
 		

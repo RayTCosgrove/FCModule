@@ -18,18 +18,19 @@ Module.register("FCModule",{
 	},
 
 	start: function() {
-	this.mySpecialProperty = "So much wow!";
-	Log.log(this.name + ' is started!');
-
-	var evtSource = new EventSource("192.168.86.248:3000/test")
-		evtSource.onmessage = function(e){
-		Log.log(e.data)
-		var node = document.createElement('SPAN')
-		var text = document.createTextNode(JSON.parse(e.data).timestamp)
+	const evtSource = new EventSource("http://localhost:3000/test");
+		evtSource.addEventListener('message', message => {
+		
+		console.log("got", message)
+		var node = document.createElement('P')
+		var text = document.createTextNode(JSON.parse(message.data))
 		node.appendChild(text)
 		var x = document.getElementById('FC')
 		x.appendChild(node)
-		}
+
+
+		});
+		
 	
 },
 
